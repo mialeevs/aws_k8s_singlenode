@@ -15,8 +15,6 @@ resource "aws_key_pair" "kp" {
 }
 
 resource "aws_instance" "temp_ec2" {
-  # ami           = "ami-0c7217cdde317cfec"
-  # Below AMI is for Mumbai region
   ami           = var.ec2_ami_id
   instance_type = var.ec2_instance_type
   key_name      = "tempkey"
